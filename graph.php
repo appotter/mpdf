@@ -251,16 +251,16 @@ function print_graph($g,$pgwidth) {
 //	$graph->img->SetImgFormat($img_type) ;
 //	if (strtoupper($img_type)=='JPEG') { $graph->img->SetQuality(90); }
 	if ($antialias) { $graph->img->SetAntiAliasing(); }
-	$graph->SetShadow(true, 2*$k); 
+	$graph->SetShadow(true, 0); 
 	$graph->SetMarginColor("white");
 	// TITLE
 	$graph->title->Set($title); 
 	$graph->title->SetMargin(10*$k);	
 	$graph->title->SetFont(FF_USERFONT,FS_BOLD,11*$k);
 	$graph->title->SetColor("black");
-	$graph->legend->SetLineSpacing(3*$k); 
-	$graph->legend->SetMarkAbsSize(6*$k); 
-	$graph->legend->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+	$graph->legend->SetLineSpacing(6*$k); 
+	$graph->legend->SetMarkAbsSize(9*$k); 
+	$graph->legend->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 
 	// Set GRAPH IMAGE MARGINS
 	if ($type == 'pie' || $type == 'pie3d') { 
@@ -332,7 +332,7 @@ function print_graph($g,$pgwidth) {
 			$p1->SetSliceColors($colours); 
 
 			if ($show_values) {
-				$p1->value->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+				$p1->value->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 				if ($percent) { $p1->SetLabelType(PIE_VALUE_PERADJ); }   //PIE_VAL_PER = default
 				else { $p1->SetLabelType(PIE_VALUE_ABS); }
 				if ($percent || $show_percent) { $p1->value->SetFormat("%d%%"); }
@@ -357,7 +357,7 @@ function print_graph($g,$pgwidth) {
 			$p1 = new PiePlot3d($data[0]); 
 			$p1->SetSliceColors($colours); 
 			if ($show_values) {
-				$p1->value->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+				$p1->value->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 				if ($percent) { $p1->SetLabelType(PIE_VALUE_PERADJ); }   //PIE_VAL_PER = default
 				else { $p1->SetLabelType(PIE_VALUE_ABS); }
 				if ($percent || $show_percent) { $p1->value->SetFormat("%d%%"); }
@@ -385,7 +385,7 @@ function print_graph($g,$pgwidth) {
 
 			$graph->SetTitles( $legends);	// labels each axis
 
-			$graph->axis->title->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+			$graph->axis->title->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 			$graph->axis->title->SetMargin(5*$k);
 			$graph->axis->SetWeight(1*$k);
 			$graph->axis->HideLabels();
@@ -416,10 +416,10 @@ function print_graph($g,$pgwidth) {
 			// Setup the graph. 
 			$graph->img->SetMargin($pml*$k,$pmr*$k,$pmt*$k,$pmb*$k);	// LRTB
 			$graph->SetScale($axes);
-			$graph->yaxis->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+			$graph->yaxis->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 
 			if ($ylabel) {
-				$graph->yaxis->title->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+				$graph->yaxis->title->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 				$graph->yaxis->SetTitle($ylabel,'middle');
 				$graph->yaxis->SetTitleMargin($yaxislblmargin*$k); 
 			}
@@ -433,13 +433,13 @@ function print_graph($g,$pgwidth) {
 			if ($hide_grid) { $graph->ygrid->Show(false); }
 
 			// Setup X-axis labels
-			$graph->xaxis->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+			$graph->xaxis->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 			$graph->xaxis->SetTickLabels($legends);
 			$graph->xaxis->SetLabelAngle($xlangle);
 			$graph->xaxis->SetLabelMargin(4*$k); 
 			// X-axis title
 			if ($xlabel) {
-				$graph->xaxis->title->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+				$graph->xaxis->title->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 				$graph->xaxis->SetTitle($xlabel,'middle');
 				$graph->xaxis->SetTitleMargin($xaxislblmargin*$k); 
 			}
@@ -452,7 +452,7 @@ function print_graph($g,$pgwidth) {
 					$bplot->value-> Show();	// Not if scatter
 					$bplot->value->SetMargin(6*$k); 
 					$bplot->value->SetColor("darkred");
-					$bplot->value->SetFont( FF_USERFONT, FS_NORMAL, 8*$k);
+					$bplot->value->SetFont( FF_USERFONT, FS_NORMAL, 11*$k);
 					if ($percent || $show_percent) { $bplot->value->SetFormat( '%d%%'); }
 					else { $bplot->value->SetFormat("%s"); }
 				}
@@ -473,10 +473,10 @@ function print_graph($g,$pgwidth) {
 			$graph->img->SetMargin($pml*$k,$pmr*$k,$pmt*$k,$pmb*$k);	// LRTB
 			$graph->SetScale($axes);
 			// Setup font for axis
-			$graph->yaxis->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+			$graph->yaxis->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 			// Y-axis title
 			if ($labels[1]) {
-				$graph->yaxis->title->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+				$graph->yaxis->title->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 				$graph->yaxis->SetTitleMargin($yaxislblmargin*$k); 
 				$graph->yaxis->SetTitle($labels[1],'middle');
 			}
@@ -493,14 +493,14 @@ function print_graph($g,$pgwidth) {
 			if ($hide_grid) { $graph->ygrid->Show(false); }
 
 			// Setup X-axis labels
-			$graph->xaxis->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+			$graph->xaxis->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 // mPDF 2.5 Corrects labelling of x-axis
 //			$graph->xaxis->SetTickLabels($legends);
 			$graph->xaxis->SetLabelAngle(50);
 			$graph->xaxis->SetLabelMargin(4*$k); 
 			// X-axis title
 			if ($labels[0]) {
-				$graph->xaxis->title->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+				$graph->xaxis->title->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 				$graph->xaxis->SetTitleMargin($xaxislblmargin*$k); 
 				$graph->xaxis->SetTitle($labels[0],'middle');
 			}
@@ -531,11 +531,11 @@ function print_graph($g,$pgwidth) {
 
 			$cplot->mark->SetType($markers[0]);
 			$cplot->mark->SetFillColor($fills[0]);
-			$cplot->mark->SetWidth(8*$k);
+			$cplot->mark->SetWidth(11*$k);
 			if ($show_values) {
 // mPDF 2.5 
 				if ($type=='xy') { $cplot->value->Show(); }	// Not if scatter
-				$cplot->value->SetMargin(8*$k); 
+				$cplot->value->SetMargin(11*$k); 
 				$cplot->value->SetColor("darkred");
 				$cplot->value->SetFont( FF_USERFONT, FS_NORMAL, 6*$k);
 
@@ -556,25 +556,25 @@ function print_graph($g,$pgwidth) {
 			$graph->img->SetMargin($pml*$k,$pmr*$k,$pmt*$k,$pmb*$k);	// LRTB
 			$graph->SetScale($axes);
 			// Setup y-axis
-			$graph->yaxis->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+			$graph->yaxis->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 			if ($hide_y_axis) { $graph->yaxis->Hide(); }
 			if ($hide_grid) { $graph->ygrid->Show(false); }
 			$graph->yaxis->SetLabelMargin(4*$k); 
 			if ($ylabel) {
-				$graph->yaxis->title->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+				$graph->yaxis->title->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 				$graph->yaxis->SetTitle($ylabel,'middle');
 				$graph->yaxis->SetTitleMargin($yaxislblmargin*$k); 
 			}
 			// Show 0 label on Y-axis (default is not to show)
 			$graph->yscale->ticks->SupressZeroLabel(false);
 			// Setup X-axis labels
-			$graph->xaxis->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+			$graph->xaxis->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 			$graph->xaxis->SetTickLabels($legends);
 			$graph->xaxis->SetLabelAngle($xlangle);
 			$graph->xaxis->SetLabelMargin(4*$k); 
 			// X-axis title
 			if ($xlabel) {
-				$graph->xaxis->title->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+				$graph->xaxis->title->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 				$graph->xaxis->SetTitle($xlabel,'middle');
 				$graph->xaxis->SetTitleMargin($xaxislblmargin*$k); 
 			}
@@ -599,7 +599,7 @@ function print_graph($g,$pgwidth) {
 					$bplot->value->Show();
 					$bplot->value->SetMargin(6*$k); 
 					$bplot->value->SetColor("darkred");
-					$bplot->value->SetFont( FF_USERFONT, FS_NORMAL, 8*$k);
+					$bplot->value->SetFont( FF_USERFONT, FS_NORMAL, 11*$k);
 					if ($percent || $show_percent) { $bplot->value->SetFormat( '%d%%'); }
 					else { $bplot->value->SetFormat("%s"); }
 				}
@@ -625,7 +625,7 @@ function print_graph($g,$pgwidth) {
 			$graph->Set90AndMargin($pml*$k,$pmr*$k,$pmt*$k,$pmb*$k);	// LRTB
 
 			// Setup y-axis
-			$graph->yaxis->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+			$graph->yaxis->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 			$graph->yaxis->SetLabelMargin(4*$k); 
 
 			$graph->yaxis->SetPos('max');	// Intersect at top of x-axis i.e. y axis is at bottom
@@ -640,7 +640,7 @@ function print_graph($g,$pgwidth) {
 			// The fix the tick marks
 			$graph->yaxis->SetTickSide(SIDE_LEFT);
 			if ($ylabel) {
-				$graph->yaxis->title->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+				$graph->yaxis->title->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 				$graph->yaxis->SetTitle($ylabel,'middle');
 				$graph->yaxis->SetTitleMargin($yaxislblmargin*$k); 
 				// Finally setup the title
@@ -654,13 +654,13 @@ function print_graph($g,$pgwidth) {
 			// Show 0 label on Y-axis (default is not to show)
 			$graph->yscale->ticks->SupressZeroLabel(false);
 			// Setup X-axis labels
-			$graph->xaxis->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+			$graph->xaxis->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 			$graph->xaxis->title->SetAngle(90);
 			$graph->xaxis->SetTickLabels($legends);
 			$graph->xaxis->SetLabelMargin(4*$k); 
 			// X-axis title
 			if ($xlabel) {
-				$graph->xaxis->title->SetFont(FF_USERFONT,FS_NORMAL,8*$k);
+				$graph->xaxis->title->SetFont(FF_USERFONT,FS_NORMAL,11*$k);
 				$graph->xaxis->SetTitleMargin($xaxislblmargin*$k); 
 				$graph->xaxis->SetTitle($xlabel,'middle');
 			}
@@ -683,7 +683,7 @@ function print_graph($g,$pgwidth) {
 					$bplot->value-> Show();
 					$bplot->value->SetMargin(6*$k); 
 					$bplot->value->SetColor("darkred");
-					$bplot->value->SetFont( FF_USERFONT, FS_NORMAL, 8*$k);
+					$bplot->value->SetFont( FF_USERFONT, FS_NORMAL, 11*$k);
 					if ($percent || $show_percent) { $bplot->value->SetFormat( '%d%%'); }
 					else { $bplot->value->SetFormat("%s"); }
 				}
