@@ -287,7 +287,9 @@ function GetLangOpts($llcc, $adobeCJK, &$fontdata) {
 						// padaukbook is unicode compliant
 		break;
 	CASE "th":  CASE "tha":	// THAI
-		$unifont = "garuda";
+		//$unifont = "garuda";
+		$unifont = "thsarabunpsk";
+		//$unifonts = "thsarabunpsk,thsarabunpskB,thsarabunpskI,thsarabunpskBI";
 		break;
 
 
