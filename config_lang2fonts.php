@@ -321,6 +321,12 @@ function GetLangOpts($llcc, $adobeCJK, &$fontdata) {
 		case "cn2": case 'pgbhzt': // Chinese
 			$unifont = "ping-guo-bo-he-zi-ti";
 			break;
+		case "cn3": case 'yxh': // Chinese
+			$unifont = "yf-xi-hei";
+			break;
+		case "cn4": case 'fhjt': // Chinese
+			$unifont = "feng-hua-jie-ti";
+			break;
 		case "zh": case "zho":	// Chinese
 			if ($country == "HK" || $country == "TW") {
 				if ($adobeCJK) { $unifont = "big5"; }

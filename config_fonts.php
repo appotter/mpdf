@@ -170,16 +170,28 @@ $this->fontdata = array(
 	/* Chinese */
 	"shuo-shou-ti" => array(
 		'R'  => "Shuo-Shuo-Ti.ttf",
-		'B'  => "Shuo-Shuo-Ti-Bold.ttf",
-		'I'  => "Shuo-Shuo-Ti-Italic.ttf",
-		'BI' => "Shuo-Shuo-Ti-Bold-Italic.ttf",
+		'B'  => "Shuo-Shuo-Ti.ttf",
+		'I'  => "Shuo-Shuo-Ti.ttf",
+		'BI' => "Shuo-Shuo-Ti.ttf",
 	),
 	"ping-guo-bo-he-zi-ti" => array(
 		'R'  => "Ping-Guo-Bo-He-Zi-Ti.ttf",
-		'B'  => "Ping-Guo-Bo-He-Zi-Ti-Bold.ttf",
-		'I'  => "Ping-Guo-Bo-He-Zi-Ti-Italic.ttf",
-		'BI' => "Ping-Guo-Bo-He-Zi-Ti-Bold-Italic.ttf",
+		'B'  => "Ping-Guo-Bo-He-Zi-Ti.ttf",
+		'I'  => "Ping-Guo-Bo-He-Zi-Ti.ttf",
+		'BI' => "Ping-Guo-Bo-He-Zi-Ti.ttf",
 	),
+	"yf-xi-hei" => array(
+		'R'  => "YF-Xi-Hei.ttf",
+		'B'  => "YF-Xi-Hei.ttf",
+		'I'  => "YF-Xi-Hei.ttf",
+		'BI' => "YF-Xi-Hei.ttf",
+	);
+	"feng-hua-jie-ti" => array(
+		'R'  => "Feng-Hua-Jie-Ti.ttf",
+		'B'  => "Feng-Hua-Jie-Ti.ttf",
+		'I'  => "Feng-Hua-Jie-Ti.ttf",
+		'BI' => "Feng-Hua-Jie-Ti.ttf",
+	);
 
 	/* Miscellaneous language font(s) */
 	"estrangeloedessa" => array(	/* Syriac */
