@@ -185,13 +185,13 @@ $this->fontdata = array(
 		'B'  => "YF-Xi-Hei.ttf",
 		'I'  => "YF-Xi-Hei.ttf",
 		'BI' => "YF-Xi-Hei.ttf",
-	);
+	),
 	"feng-hua-jie-ti" => array(
 		'R'  => "Feng-Hua-Jie-Ti.ttf",
 		'B'  => "Feng-Hua-Jie-Ti.ttf",
 		'I'  => "Feng-Hua-Jie-Ti.ttf",
 		'BI' => "Feng-Hua-Jie-Ti.ttf",
-	);
+	),
 
 	/* Miscellaneous language font(s) */
 	"estrangeloedessa" => array(	/* Syriac */
